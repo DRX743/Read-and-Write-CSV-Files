@@ -4,8 +4,12 @@
   "description": "CSV reader",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "snowpack dev",
+    "build": "snowpack build"
   },
   "author": "Reda",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "snowpack": "^3.8.8"
+  }
 }
