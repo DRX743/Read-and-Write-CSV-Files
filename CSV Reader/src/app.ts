@@ -12,6 +12,36 @@ csvForm.addEventListener('submit', (e: Event) => {
 
     const input = csvFile.files[0];
 
+    csvReader.onload = function(evt) {
+        const text = evt.target.result;
+
+        if(typeof text === 'string' || text instanceof String) {
+            const values = text.split(/[\n]+/);
+
+            values.forEach(val => {
+                final_vals.push(val.split(','));
+            });
+
+            generate_table(<[string[]]>final_vals).then(result => {
+                displayArea.innerHTML = result;
+
+                const th_values = document.getElementsByTagName('th');
+                const td_values = document.getElementsByTagName('td');
+
+                const capitilize_table_column = (table_e: HTMLElement) => {
+                    table_e.innerHTML = table_e.innerHTML[0].toUpperCase() + table_e.innerHTML.slice(1);
+                };
+
+                for(const th_val of th_values) {
+                    capitilize_table_column(th_val);
+                }
+                for(const td_val of td_values) {
+                    capitilize_table_column(td_val);
+                }
+            })
+        }
+    }
+
     csvReader.readAsText(input);
 });
 
