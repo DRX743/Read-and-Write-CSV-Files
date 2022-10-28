@@ -32,3 +32,13 @@ function newColumnFormInput(): HTMLDivElement {
 
     return containerDiv;
 };
+
+function createNewColArea(mainColumnList: string[], returnFunc: () => any): HTMLFormElement {
+    const mainForm = document.createElement('form') as HTMLFormElement;
+    const mainFieldSet = document.createElement('fieldset') as HTMLFieldSetElement;
+    const mainFieldSetLegend = document.createElement('legend') as HTMLLegendElement;
+    const newBtnDiv = document.createElement('div') as HTMLDivElement;
+    const newBtn = document.createElement('button') as HTMLButtonElement;
+    const submitInputDiv = document.createElement('div') as HTMLDivElement;
+    const submitInput = document.createElement('input') as HTMLInputElement;
+}
