@@ -57,4 +57,15 @@ function createNewColArea(mainColumnList: string[], returnFunc: () => any): HTML
 
     newBtn.innerHTML = 'New';
     mainFieldSetLegend.innerHTML = 'Columns';
+
+    mainForm.append(mainFieldSet);
+    mainForm.append(newBtnDiv);
+    mainForm.append(submitInputDiv);
+
+    mainFieldSet.append(mainFieldSetLegend);
+    mainFieldSet.append(newColumnFormInput());
+
+    newBtnDiv.append(newBtn);
+
+    submitInputDiv.append(submitInput);
 }
