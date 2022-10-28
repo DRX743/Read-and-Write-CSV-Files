@@ -45,4 +45,9 @@ function createNewColArea(mainColumnList: string[], returnFunc: () => any): HTML
     mainFieldSet.id = "columnGenForm";
     mainFieldSet.id = "newColFieldSet";
     newBtn.id = "newColBtn";
+
+    newBtnDiv.classList.add('mb-3');
+    newBtn.classList.add('btn', 'btn-success');
+    submitInputDiv.classList.add('mb-3');
+    submitInput.classList.add('btn', 'btn-primary');
 }
