@@ -50,4 +50,11 @@ function createNewColArea(mainColumnList: string[], returnFunc: () => any): HTML
     newBtn.classList.add('btn', 'btn-success');
     submitInputDiv.classList.add('mb-3');
     submitInput.classList.add('btn', 'btn-primary');
+
+    newBtn.setAttribute('type', 'button');
+    submitInput.setAttribute('type', 'submit');
+    submitInput.setAttribute('value', 'Submit');
+
+    newBtn.innerHTML = 'New';
+    mainFieldSetLegend.innerHTML = 'Columns';
 }
