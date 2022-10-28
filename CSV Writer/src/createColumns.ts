@@ -41,4 +41,8 @@ function createNewColArea(mainColumnList: string[], returnFunc: () => any): HTML
     const newBtn = document.createElement('button') as HTMLButtonElement;
     const submitInputDiv = document.createElement('div') as HTMLDivElement;
     const submitInput = document.createElement('input') as HTMLInputElement;
+
+    mainFieldSet.id = "columnGenForm";
+    mainFieldSet.id = "newColFieldSet";
+    newBtn.id = "newColBtn";
 }
