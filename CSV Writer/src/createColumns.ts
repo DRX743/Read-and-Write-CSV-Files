@@ -68,4 +68,21 @@ function createNewColArea(mainColumnList: string[], returnFunc: () => any): HTML
     newBtnDiv.append(newBtn);
 
     submitInputDiv.append(submitInput);
+
+    mainForm.addEventListener('submit', (e: Event) => {
+        e.preventDefault();
+
+        const submittedForm = e.target as HTMLFormElement;
+
+        const colInputs = submittedForm.getElementsByTagName('input') as HTMLCollectionOf<HTMLInputElement>;
+
+        Array.from(colInputs).forEach((colInput: HTMLInputElement) => {
+            if(colInput.getAttribute('type') === 'text') {
+                mainColumnList.push(colInput.value);
+            }
+        });
+
+        returnFunc();
+
+    });
 }
