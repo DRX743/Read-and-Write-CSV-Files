@@ -85,4 +85,14 @@ function createNewColArea(mainColumnList: string[], returnFunc: () => any): HTML
         returnFunc();
 
     });
-}
+
+    newBtn.addEventListener('click', () => {
+        const newField = newColumnFormInput();
+        mainFieldSet.append(newField);
+    });
+
+
+    return mainForm;
+};
+
+export { createNewColArea };
