@@ -9,7 +9,7 @@ A Frontend TypeScriptript Program to read and display a CSV files
 ## Tools
 - TypeScript
 - HTML
-- Bootstrap
+- CSS (Bootstrap v5)
 - Snowpack
 
 ## Useful links
